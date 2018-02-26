@@ -32,13 +32,14 @@ export class AppComponent {
       const text = `${nick}: ${receivedMessage}`;
       this.messages.push(text);
     });
+  }
 
-    // Send message to client from TO server
-    public sendMessage() : void {
-      this.hubConnection
+  // Send message to client from TO server
+  public sendMessage(): void {
+    this.hubConnection
       .invoke('sendToAll', this.nick, this.message)
       .catch(err => console.error(err));
-    }
-
   }
+
+
 }
