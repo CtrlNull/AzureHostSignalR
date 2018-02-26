@@ -16,6 +16,15 @@ namespace AzureHost
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();// <--- SignalR
+
+            // Cors
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:4200");
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,6 +34,7 @@ namespace AzureHost
             {
                 app.UseDeveloperExceptionPage();
             }
+            // Setup SignalR routes
             app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("chat");
