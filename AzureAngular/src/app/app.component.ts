@@ -27,5 +27,10 @@ export class AppComponent {
       .start()
       .then(() => console.log('Connection Started:'))
       .catch(err => console.log('Error while establishing connection :('));
+
+    this.hubConnection.on('sendToAll', (nick: string, receivedMessage: string) => {
+      const text = `${nick}: ${receivedMessage}`;
+      this.messages.push(text);
+    });
   }
 }
