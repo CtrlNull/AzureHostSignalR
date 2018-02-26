@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { HubConnection } from '@aspnet/signalr-client';
+import {
+  Component
+} from '@angular/core';
+import {
+  HubConnection
+} from '@aspnet/signalr-client';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +16,16 @@ export class AppComponent {
   nick = '';
   message = '';
   messages: string[] = [];
+
+
+  ngOnInit() {
+    this.nick = window.prompt('Your name:', 'John');
+
+    this.hubConnection = new HubConnection('http://localhost:5000/chat');
+
+    this.hubConnection
+      .start()
+      .then(() => console.log('Connection Started:'))
+      .catch(err => console.log('Error while establishing connection :('));
+  }
 }
