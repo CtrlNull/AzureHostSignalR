@@ -34,6 +34,7 @@ namespace AzureHost
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors("CorsPolicy");
             // Setup SignalR routes
             app.UseSignalR(routes =>
             {
