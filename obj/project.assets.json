@@ -1409,9 +1409,6 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Http/0.0.1-alpha": {
-        "type": "package"
-      },
       "Microsoft.AspNetCore.Sockets/1.0.0-alpha1-final": {
         "type": "package",
         "dependencies": {
@@ -5975,16 +5972,6 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Core.xml",
         "microsoft.aspnetcore.signalr.core.1.0.0-alpha1-final.nupkg.sha512",
         "microsoft.aspnetcore.signalr.core.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.SignalR.Http/0.0.1-alpha": {
-      "sha512": "RbmhG8X/tYwqn9qypxasrJXtNuGsb4C6FxwTs3qydUwjsogWvmSr/gOyMtBV4B6yLOQWHwxv1ujERpseNJZ+og==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.signalr.http/0.0.1-alpha",
-      "files": [
-        "content/_._",
-        "microsoft.aspnetcore.signalr.http.0.0.1-alpha.nupkg.sha512",
-        "microsoft.aspnetcore.signalr.http.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Sockets/1.0.0-alpha1-final": {
@@ -12983,7 +12970,6 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.AspNetCore.SignalR >= 1.0.0-alpha1-final",
-      "Microsoft.AspNetCore.SignalR.Http >= 0.0.1-alpha",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -12995,11 +12981,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\rapha\\repos\\AzureHost\\AzureHost.csproj",
+      "projectUniqueName": "C:\\Users\\rapha\\repos\\AzureHostSignalR\\AzureHost.csproj",
       "projectName": "AzureHost",
-      "projectPath": "c:\\Users\\rapha\\repos\\AzureHost\\AzureHost.csproj",
+      "projectPath": "C:\\Users\\rapha\\repos\\AzureHostSignalR\\AzureHost.csproj",
       "packagesPath": "C:\\Users\\rapha\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\rapha\\repos\\AzureHost\\obj\\",
+      "outputPath": "C:\\Users\\rapha\\repos\\AzureHostSignalR\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13038,10 +13024,6 @@
           "Microsoft.AspNetCore.SignalR": {
             "target": "Package",
             "version": "[1.0.0-alpha1-final, )"
-          },
-          "Microsoft.AspNetCore.SignalR.Http": {
-            "target": "Package",
-            "version": "[0.0.1-alpha, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
