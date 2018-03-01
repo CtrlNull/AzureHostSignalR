@@ -1,0 +1,46 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="Status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Status}} </mat-cell>
+    </ng-container>
+
+    <!-- Base Column -->
+    <ng-container matColumnDef="Base">
+      <mat-header-cell *matHeaderCellDef> Base </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Base}} </mat-cell>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="Description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Description}} </mat-cell>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="Amount">
+      <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Amount}} </mat-cell>
+    </ng-container>
+    <!-- CumAmt Column -->
+    <ng-container matColumnDef="CumAmt">
+      <mat-header-cell *matHeaderCellDef> CumAmt </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.CumAmt}} </mat-cell>
+    </ng-container>
+
+    <!-- PouredAmt Column -->
+    <ng-container matColumnDef="PouredAmt">
+      <mat-header-cell *matHeaderCellDef> PouredAmt </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.PouredAmt}} </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
