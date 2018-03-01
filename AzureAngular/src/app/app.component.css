@@ -1,0 +1,58 @@
+/* ============== Nav Bar Area =============== */
+#navbar {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-align:center;
+}
+/* Header -> connected text */
+#isConnected {
+    padding-left: 1.5em;
+}
+
+
+/* =============== Table Area ================ */
+.ng-table-pager {
+    display: none;
+}
+#tableBox {
+    margin-top: 15px;
+}
+
+/* ============ Progress Bar Area ============ */
+#progressBar {
+    /* margin-top: 40px; */
+    
+}
+#progressBarSpaceOne {
+    margin: 1.5px;
+}
+#progressBarSpaceTwo {
+    margin: 1.5px;
+}
+#progressBarSpaceThree {
+    margin: 1.5px;
+}
+/* ============== Button Area ================ */
+#buttonRow {
+    padding-top: 2.5%;
+    margin-left: 15%;
+}
+
+/* ~~~~ Left Panel ~~~~*/
+#weightNumber {
+    margin-left: 150px;
+}
+#getWeight {
+    border-right: 1px solid grey;
+}
+
+/* ~~~ Middle Panel ~~~~*/
+
+/* ~~~~ Right Panel ~~~~*/
+#message {
+    margin-bottom: 5px;
+}
+#SendMessage {
+    border-left: 1px solid grey;
+}

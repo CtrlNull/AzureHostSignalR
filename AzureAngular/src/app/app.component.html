@@ -7,20 +7,53 @@
 
   <div class="container">
     <h2>Hello {{nick}}!</h2>
-    <form (ngSubmit)="sendMessage()" #chatForm="ngForm">
-      <div>
-        <label for="message">Message</label>
-        <input type="text" id="message" name="message" [(ngModel)]="message" required>
-      </div>
-      <button type="submit" id="sendmessage" [disabled]="!chatForm.valid">
-        Send
-      </button>
-    </form>
   </div>
+        <!-- Progress bar -->
+        <div class="container text-center" id="containerProgress">
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBarSpaceOne" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">352-91</div>
+            </div>
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="progressBarSpaceTwo" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">A929</div>
+            </div>
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" id="progressBarSpaceThree" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">M25</div>
+            </div>
+        </div>
 
-  <div class="container" *ngIf="messages.length > 0">
-    <div *ngFor="let message of messages">
-      <span>{{message}}</span>
+  <!-- Button Row -->
+  <div class="container" id="buttonRow">
+    <div class="row">
+      <!-- Pour Amount Section-->
+      <div class="col-md-3" id="getWeight">
+        <h5 class="text-center">Pour Amount: </h5>
+        <div class="container" *ngIf="messages.length > 0">
+          <div *ngFor="let message of messages">
+            <span>{{message}}</span>
+          </div>
+        </div>
+      </div>
+      <!-- Current Ingredient Section -->
+      <div class="col-md-3" id="changeIngredient">
+        <h5 class="text-center">Current Ingredient: </h5>
+        <p class="text-center">352-91 Static</p>
+        <div class="text-center">
+          <button class="btn btn-info">Next</button>
+        </div>
+      </div>
+      <!-- Messaging testing Section-->
+      <div class="col-md-3 text-center" id="SendMessage">
+        <p id="signalRMessage">SignalR Hub Testing</p>
+        <form (ngSubmit)="sendMessage()" #chatForm="ngForm">
+          <div>
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message" [(ngModel)]="message" required>
+          </div>
+          <button type="submit" id="sendmessage" [disabled]="!chatForm.valid">
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
